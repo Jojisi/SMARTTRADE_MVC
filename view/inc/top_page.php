@@ -44,10 +44,10 @@
 		});
 	</script>
 	<link href="view/css/style.css" rel="stylesheet" type="text/css" />
-	<script src="module/households/model/validate_households.js"></script>
+	<!-- <script src="module/households/model/validate_households.js"></script>
 	<script src="module/course/model/validate_course.js"></script>
 	<script src="module/households/model/promises.js"></script>
-	<script src="module/course/model/promises.js"></script>
+	<script src="module/course/model/promises.js"></script> -->
 
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet" />
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>

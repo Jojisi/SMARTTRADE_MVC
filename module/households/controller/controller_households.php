@@ -1,7 +1,7 @@
 <?php
 // $data = 'hola crtl households';
 // die('<script>console.log('.json_encode( $data ) .');</script>');
-$path = $_SERVER['DOCUMENT_ROOT'] . '/SMARTTRADE_MVC/';
+$path = $_SERVER['DOCUMENT_ROOT'] . '/MQC_MVC_EXAMEN_joanjimenez_si/';
 include($path . "module/households/model/DAOhouseholds.php");
 
 @session_start();

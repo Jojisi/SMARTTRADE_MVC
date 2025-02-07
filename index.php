@@ -1,8 +1,8 @@
 <?php
 if ((isset($_GET['pages'])) && ($_GET['pages'] === "controller_home")) {
-	include("view/inc/top_page_households.php");
+	include("view/inc/top_page.php");
 } else {
-	include("view/inc/top_page_households.php");
+	include("view/inc/top_page.php");
 	//include("view/inc/top_page.php");
 }
 include("view/inc/header.php");

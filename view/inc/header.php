@@ -1,7 +1,7 @@
 <header id="header" class="fixed-top d-flex align-items-center">
     <div class="container d-flex align-items-center">
 
-        <h1 class="logo me-auto"><a href="index.php?page=controller_home">MASQUECHOZAS</a></h1>
+        <h1 class="logo me-auto"><a href="index.php?page=controller_home">SMART TRADE</a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
@@ -26,8 +26,6 @@
                         </li>
                     </ul>
                 </li>
-                <li><a href="index.php?pages=controller_households&op=list">Households</a></li>
-                <li><a href="index.php?pages=controller_course&op=list">Course</a></li>
                 <li><a href="index.php?pages=portfolio">Portfolio</a></li>
                 <li><a href="index.php?pages=pricing">Pricing</a></li>
                 <li><a href="index.php?pages=blog">Blog</a></li>

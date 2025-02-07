@@ -5,13 +5,6 @@ if (isset($_GET['pages'])) {
 		case "controller_home";
 			include("module/home/" . $_GET['page'] . ".php	");
 			break;
-
-		case "controller_households";
-			include("module/households/controller/" . $_GET['pages'] . ".php");
-			break;
-			case "controller_course";
-			include("module/course/controller/" . $_GET['pages'] . ".php");
-			break;
 		case "services";
 			include("module/services/" . $_GET['pages'] . ".php");
 			break;

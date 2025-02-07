@@ -1,6 +1,6 @@
 <?php
 
-$path = $_SERVER['DOCUMENT_ROOT'] . '/SMARTTRADE_MVC/';
+$path = $_SERVER['DOCUMENT_ROOT'] . '/MQC_MVC_EXAMEN_joanjimenez_si/';
 include($path . "model/connect.php");
 // include("model/connect.php");
 
