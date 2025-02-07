@@ -69,7 +69,7 @@ We welcome contributions from the community! Feel free to submit pull requests o
 
 Shout out to Alex Conchilla Guerola who contributet to the logo ! [@AlexParrys](https://github.com/AlexParrys)
 
-📧 Contact us at: [your email/contact link]
+📧 Contact us at: [joanjimenezinfo@gmail.com]
 
 ---
 
