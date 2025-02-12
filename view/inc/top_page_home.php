@@ -14,6 +14,8 @@
 	<link href="view/img/apple-touch-icon.png" rel="apple-touch-icon">
 
 	<!-- Google Fonts -->
+	<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet"> -->
+
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
 	<!-- Vendor CSS Files -->
@@ -45,14 +47,19 @@
 		});
 	</script>
 	<link href="view/css/style.css" rel="stylesheet" type="text/css" />
-    <script src="module/home/model/controller_home.js"></script>
+	<script src="module/home/model/controller_home.js"></script>
 	<!-- <script src="module/households/model/validate_households.js"></script>
 	<script src="module/course/model/validate_course.js"></script>
 	<script src="module/households/model/promises.js"></script>
 	<script src="module/course/model/promises.js"></script> -->
 
-	<script src="view/glider/glider.js"></script>
-	<link rel="stylesheet" type="text/css" href="view/glider/glider.css">
+	<!-- <script src="view/glider/glider.js"></script> -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.8/glider.min.css">
+<script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.8/glider.min.js"></script>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+	<!-- <link rel="stylesheet" type="text/css" href="view/glider/glider.css"> -->
 
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet" />
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
