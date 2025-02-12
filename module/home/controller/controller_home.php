@@ -29,7 +29,7 @@ if (isset($_GET['op'])) {
             break;
     }
 } else {
-    $callback = "index.php?page=controller_home&op=list";
+    $callback = "index.php?pages=controller_home&op=list";
     die('<script>window.location.href="' . $callback . '";</script>');
 }
 ?>
