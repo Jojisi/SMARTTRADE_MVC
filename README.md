@@ -67,7 +67,7 @@ _A preview of the platform's interface will be added soon!_
 
 We welcome contributions from the community! Feel free to submit pull requests or report issues.
 
-Shout out to Alex Conchilla Guerola who contributed to the logo ! [@AlexParrys](https://github.com/AlexParrys)
+Shout out to Alex Conchilla Guerola who contributed to the logo! [@AlexParrys](https://github.com/AlexParrys)
 
 📧 Contact us at: [joanjimenezinfo@gmail.com]
 
