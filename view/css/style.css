@@ -2180,3 +2180,203 @@ a {
 a:hover {
   color: #ffffff;
 }
+
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/*--------------------------------------------------------------
+# Swiper Type Section
+--------------------------------------------------------------*/
+#swiper-type .carousel-container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  position: absolute;
+  bottom: 60px;
+  top: 70px;
+  left: 55px;
+  right: 55px;
+}
+
+#swiper-type .carousel-content {
+  background: rgba(4, 4, 4, 0.7);
+  padding: 20px;
+  color: #fff;
+  border-top: 5px solid #1bbd36;
+}
+
+#swiper-type .carousel-content h2 {
+  color: #fff;
+  margin-bottom: 20px;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+#swiper-type .btn-get-started {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 12px 32px;
+  border-radius: 4px;
+  transition: 0.5s;
+  line-height: 1;
+  margin: 10px;
+  color: #fff;
+  animation-delay: 0.8s;
+  border: 2px solid #1bbd36;
+}
+
+#swiper-type .btn-get-started:hover {
+  background: #1bbd36;
+  color: #fff;
+  text-decoration: none;
+}
+
+#swiper-type .carousel-inner .carousel-item {
+  transition-property: opacity;
+  background-position: center top;
+}
+
+#swiper-type .carousel-inner .carousel-item,
+#swiper-type .carousel-inner .active.carousel-item-start,
+#swiper-type .carousel-inner .active.carousel-item-end {
+  opacity: 0;
+}
+
+#swiper-type .carousel-inner .active,
+#swiper-type .carousel-inner .carousel-item-next.carousel-item-start,
+#swiper-type .carousel-inner .carousel-item-prev.carousel-item-end {
+  opacity: 1;
+  transition: 0.5s;
+}
+
+#swiper-type .carousel-inner .carousel-item-next,
+#swiper-type .carousel-inner .carousel-item-prev,
+#swiper-type .carousel-inner .active.carousel-item-start,
+#swiper-type .carousel-inner .active.carousel-item-end {
+  left: 0;
+  transform: translate3d(0, 0, 0);
+}
+
+@media (min-width: 1024px) {
+  #swiper-type .carousel-content {
+    width: 60%;
+  }
+
+  #swiper-type .carousel-control-prev,
+  #swiper-type .carousel-control-next {
+    width: 5%;
+  }
+}
+
+@media (max-width: 992px) {
+  #swiper-type .carousel-container {
+    top: 58px;
+  }
+
+  #swiper-type .carousel-content h2 {
+    margin-bottom: 15px;
+    font-size: 22px;
+  }
+
+  #swiper-type .carousel-content p {
+    font-size: 15px;
+  }
+}
+
+@media (max-height: 500px) {
+  #swiper-type {
+    height: 120vh;
+  }
+}
+
+.swiper-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#swiper-type .swiper-container {
+  height: 100vh;
+}
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* CSS PARA LAS TARJETAS HOME */
+
+
+.card_image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Asegura que toda la imagen sea visible */
+}
+
+.card_title {
+  margin-top: 5px;
+  font-family: "Poppins", sans-serif; /* Fuente moderna */
+  font-size: 14px;
+  color: #333;
+  font-weight: 500;
+}
+
+#top {
+  width: 100%;
+  text-align: left;
+  padding: 10px 20px;
+}
+
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap'); */
+
+
+#top h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.cards-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px 0;
+  justify-content: center;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 15px;
+  width: 120px;
+  height: 140px; /* 🔹 Se aumentó un poco la altura para dar más espacio */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between; /* 🔹 Mantiene el nombre siempre abajo */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  border: 1px solid #e0e0e0;
+}
+
+.card img {
+  max-width: 60px;
+  max-height: 60px;
+  object-fit: contain;
+}
+
+.card p {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  text-align: center;
+  min-height: 20px; /* 🔹 Asegura que todos los textos tengan la misma altura */
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+  border-color: #d1d1d1;
+}
