@@ -2325,10 +2325,10 @@ a:hover {
   overflow: hidden;
 }
 
-.glider-prev,
-.glider-next {
+#port-sec .glider-prev,
+#port-sec .glider-next {
   position: absolute;
-  top: 45% !important; /* Puedes subir este valor si quieres más abajo */
+  top: 50%;
   transform: translateY(-50%);
   background-color: white;
   border: none;
@@ -2346,41 +2346,47 @@ a:hover {
   z-index: 5;
 }
 
-
-.glider-prev:hover,
-.glider-next:hover {
+#port-sec .glider-prev:hover,
+#port-sec .glider-next:hover {
   background-color: #f4f4f4;
   transform: translateY(-50%) scale(1.1);
 }
 
-.glider-prev {
-  left: -65px !important;
+#port-sec .glider-prev {
+  left: -65px;
 }
 
-.glider-next {
-  right: -65px !important;
+#port-sec .glider-next {
+  right: -65px;
 }
 
-.dots {
+#port-sec .glider-prev i,
+#port-sec .glider-next i {
+  font-size: 18px;
+  color: #333;
+}
+
+
+#port-sec .dots {
   display: flex;
   justify-content: center;
   margin-top: 15px;
 }
 
-.dots button {
-  background: #d3d3d3;
-  border: none;
-  width: 12px;
-  height: 12px;
+#port-sec .dots button {
+  background-color: #ddd;
   border-radius: 50%;
-  margin: 0 5px;
+  width: 10px;
+  height: 10px;
+  margin: 5px;
+  border: none;
   cursor: pointer;
-  transition: background 0.3s ease;
 }
 
-.dots button.active {
-  background: #333;
+#port-sec .dots button.active {
+  background-color: #333;
 }
+
 
 /* CARDS ESTILIZADAS */
 .card {
@@ -2440,3 +2446,137 @@ a:hover {
   margin-left: 140px;
   text-align: left;
 }
+
+/* ////////////////////////////////////////////////////////////////////// */ 
+/* =======================
+    Catalog Carousel Styles
+========================== */
+/* =======================
+    Catalog Carousel Styles
+========================== */
+#catalog-sec {
+  margin-bottom: 40px;
+}
+
+#catalog-sec #top-catalog h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 20px;
+  margin-left: 140px;
+  text-align: left;
+}
+
+#catalog-sec .glider-wrapper {
+  position: relative;
+}
+
+#catalog-sec .glider-prev-catalog,
+#catalog-sec .glider-next-catalog {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 5;
+}
+
+#catalog-sec .glider-prev-catalog:hover,
+#catalog-sec .glider-next-catalog:hover {
+  background-color: #f4f4f4;
+  transform: translateY(-50%) scale(1.1);
+}
+
+#catalog-sec .glider-prev-catalog {
+  left: -65px;
+}
+
+#catalog-sec .glider-next-catalog {
+  right: -65px;
+}
+
+#catalog-sec .glider-prev-catalog i,
+#catalog-sec .glider-next-catalog i {
+  font-size: 18px;
+  color: #333;
+}
+
+#catalog-sec .dots-catalog {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+#catalog-sec .dots-catalog button {
+  background-color: #ddd;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  margin: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+#catalog-sec .dots-catalog button.active {
+  background-color: #333;
+}
+
+#catalog-sec .card {
+  background-color: white;
+  border-radius: 16px;
+  padding: 20px;
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  border: 1px solid #f0f0f0;
+  margin: 0 8px;
+}
+
+#catalog-sec .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+  border-color: #e0e0e0;
+}
+
+#catalog-sec .card_image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 12px;
+}
+
+#catalog-sec .card_image img {
+  max-width: 70px;
+  max-height: 70px;
+  object-fit: contain;
+}
+
+#catalog-sec .card_title p {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+

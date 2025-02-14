@@ -12,13 +12,28 @@ if (isset($_GET['op'])) {
         case 'homePageBrand':
             try {
                 $daohome = new DAOHome();
-                $SelectCategory = $daohome->select_brands();
+                $SelectBrand = $daohome->select_brands();
             } catch (Exception $e) {
                 echo json_encode("error");
             }
 
-            if (!empty($SelectCategory)) {
-                echo json_encode($SelectCategory);
+            if (!empty($SelectBrand)) {
+                echo json_encode($SelectBrand);
+            } else {
+                echo json_encode("error");
+            }
+            break;
+
+        case 'homePageCatalog':
+            try {
+                $daohome = new DAOHome();
+                $SelectCatalog = $daohome->select_catalog();
+            } catch (Exception $e) {
+                echo json_encode("error");
+            }
+
+            if (!empty($SelectCatalog)) {
+                echo json_encode($SelectCatalog);
             } else {
                 echo json_encode("error");
             }
@@ -32,4 +47,3 @@ if (isset($_GET['op'])) {
     $callback = "index.php?pages=controller_home&op=list";
     die('<script>window.location.href="' . $callback . '";</script>');
 }
-?>
