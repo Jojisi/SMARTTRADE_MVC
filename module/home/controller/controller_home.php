@@ -39,6 +39,21 @@ if (isset($_GET['op'])) {
             }
             break;
 
+            case 'homePageCondition':
+                try {
+                    $daohome = new DAOHome();
+                    $SelectCondition = $daohome->select_condition();
+                } catch (Exception $e) {
+                    echo json_encode("error");
+                }
+    
+                if (!empty($SelectCondition)) {
+                    echo json_encode($SelectCondition);
+                } else {
+                    echo json_encode("error");
+                }
+                break;
+
         default:
             include("module/exceptions/views/pages/error404.php");
             break;

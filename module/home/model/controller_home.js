@@ -1,6 +1,7 @@
 function loadBrand() {
     ajaxPromise('module/home/controller/controller_home.php?op=homePageBrand', 'GET', 'JSON')
         .then(function (data) {
+            // console.log(data);
             let container = $('#containerBrands');
 
             data.forEach(function (brand) {
@@ -41,6 +42,7 @@ function loadBrand() {
 function loadCatalog() {
     ajaxPromise('module/home/controller/controller_home.php?op=homePageCatalog', 'GET', 'JSON')
         .then(function (data) {
+            // console.log(data);
             let container = $('#containerCatalog');
             container.empty();
 
@@ -79,7 +81,28 @@ function loadCatalog() {
         });
 }
 
+function loadCondition() {
+    ajaxPromise('module/home/controller/controller_home.php?op=homePageCondition', 'GET', 'JSON')
+        .then(function(data) {
+            console.log(data);
+            for (let row in data) {
+                $('<div></div>').attr('class', "card").attr({ 'id': data[row].name_condition_type }).appendTo('#containerCondition')  // Cambié #containerBrands a #containerCondition
+                    .html(
+                        "<div class='card_image'>" +
+                        "<img src='http://localhost/SMARTTRADE_MVC/" + data[row].img_condition_type + "' />" +
+                        "</div>" +
+                        "<div class='card_title'>" +  // Cambié card_black title-black a card_title
+                        "<p>" + data[row].name_condition_type + "</p>" +
+                        "</div>"
+                    );
+            }
+        }).catch(function() {
+            window.location.href = "index.php?module=controller_exceptions&op=503&type=503&lugar=Type_Condition HOME";
+        });
+}
+
 $(document).ready(function () {
     loadBrand();
     loadCatalog();
+    loadCondition();
 });
