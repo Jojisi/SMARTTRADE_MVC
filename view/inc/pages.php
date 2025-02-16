@@ -9,6 +9,10 @@ if (isset($_GET['pages'])) {
             include("module/home/controller/controller_home.php");
             break;
 
+        case "controller_shop":
+            include("module/shop/controller/controller_shop.php");
+            break;
+
         case "services":
             include("module/services/" . $_GET['pages'] . ".php");
             break;
@@ -64,4 +68,3 @@ if (isset($_GET['pages'])) {
 } else {
     include("module/home/controller/controller_home.php");
 }
-?>

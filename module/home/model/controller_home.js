@@ -104,7 +104,7 @@ function loadCondition() {
 function loadCity() {
     ajaxPromise('module/home/controller/controller_home.php?op=homePageCity', 'GET', 'JSON')
         .then(function (data) {
-            console.log(data);
+            // console.log(data);
             let container = $('#containerCity');
             container.empty();
 

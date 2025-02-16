@@ -2798,3 +2798,117 @@ a:hover {
   margin: 0;
   font-family: "Poppins", sans-serif;
 }
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////  SHOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOP */
+/* Sidebar de filtros */
+.filters {
+    width: 250px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.clear-filters {
+    width: 100%;
+    padding: 10px;
+    background: #f5f5f5;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+.search-box {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 15px;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+
+.search-box button {
+    background: orange;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.filter-section {
+    margin-bottom: 15px;
+}
+
+.filter-section h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+/* Contenido de la tienda */
+.shop {
+    flex: 1;
+    margin-left: 20px;
+}
+
+.top-filters {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.top-filters button {
+    padding: 8px 12px;
+    border: none;
+    background: white;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+}
+
+/* Estilos de producto */
+.product-card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.product-card h3 {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.product-card p {
+    font-size: 14px;
+    color: gray;
+}
+
+.product-card .price {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.product-card .buy-btn {
+    display: block;
+    margin-top: 10px;
+    padding: 8px;
+    background: orange;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
