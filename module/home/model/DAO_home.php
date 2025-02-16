@@ -51,4 +51,20 @@ class DAOHome
         }
         return $retrArray;
     }
+
+    function select_city() {
+        $sql= "SELECT * FROM city";
+
+        $conexion = connect::con();
+        $res = mysqli_query($conexion, $sql);
+        connect::close($conexion);
+
+        $retrArray = array();
+        if (mysqli_num_rows($res) > 0) {
+            while ($row = mysqli_fetch_assoc($res)) {
+                $retrArray[] = $row;
+            }
+        }
+        return $retrArray;
+    }
 }

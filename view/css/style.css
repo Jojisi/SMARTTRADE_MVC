@@ -2612,7 +2612,7 @@ a:hover {
   padding: 10px 0;
 }
 
-.card {
+.card-condition {
   background: #fff;
   border-radius: 12px;
   padding: 15px;
@@ -2628,8 +2628,8 @@ a:hover {
 }
 
 .card_image {
-  width: 60px;
-  height: 60px;
+  width: 80px;
+  height: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2657,8 +2657,144 @@ a:hover {
   min-height: 20px;
 }
 
-.card:hover {
+.card-condition:hover {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
   transform: translateY(-5px);
-  border-color: #d1d1d1;
+  border-color: #50a5ff;
+}
+
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* city */
+
+#city-sec {
+  margin-bottom: 40px;
+}
+
+#city-sec #top-city h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 20px;
+  margin-left: 140px;
+  text-align: left;
+}
+
+#city-sec .glider-wrapper {
+  position: relative;
+}
+
+#city-sec .glider-prev-city,
+#city-sec .glider-next-city {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 5;
+}
+
+#city-sec .glider-prev-city:hover,
+#city-sec .glider-next-city:hover {
+  background-color: #f4f4f4;
+  transform: translateY(-50%) scale(1.1);
+}
+
+#city-sec .glider-prev-city {
+  left: -65px;
+}
+
+#city-sec .glider-next-city {
+  right: -65px;
+}
+
+#city-sec .glider-prev-city i,
+#city-sec .glider-next-city i {
+  font-size: 18px;
+  color: #333;
+}
+
+#city-sec .dots-city {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+#city-sec .dots-city button {
+  background-color: #ddd;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  margin: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+#city-sec .dots-city button.active {
+  background-color: #333;
+}
+
+/* Estilos de la tarjeta */
+#city-sec .card {
+  background-color: white;
+  border-radius: 12px;
+  height: 220px; /* Ajuste de altura */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  border: 1px solid #f0f0f0;
+  margin: 0 8px;
+  position: relative;
+  overflow: hidden; /* Evita que la imagen sobresalga */
+}
+
+#city-sec .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+  border-color: #e0e0e0;
+}
+
+/* Ajustar la imagen para ocupar toda la card */
+#city-sec .card_image {
+  width: 100%;
+  height: 100%;
+}
+
+#city-sec .card_image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajusta la imagen sin deformarla */
+}
+
+/* Nombre de la ciudad en la parte inferior */
+#city-sec .card_title {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  text-align: center;
+  padding: 4px 0;
+}
+
+#city-sec .card_title p {
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff; /* Cambiado a blanco para mejor visibilidad */
+  margin: 0;
+  font-family: "Poppins", sans-serif;
 }
