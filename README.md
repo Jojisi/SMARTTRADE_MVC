@@ -1,6 +1,9 @@
 # <p align="center">
-  <img src="https://github.com/user-attachments/assets/8387740e-7c8f-422e-97e0-e3c37d8e2adc" alt="SmartTrade Logo">
+  <img src="https://github.com/user-attachments/assets/d55b69a2-ac1e-4658-9741-10751c8b076a" alt="SmartTrade Screenshot 1" width="100%">
+  <img src="https://github.com/user-attachments/assets/4ead5b3d-3a6a-4317-a693-25836bab8fc7" alt="SmartTrade Screenshot 2" width="100%">
+  <img src="https://github.com/user-attachments/assets/b3672982-7fbf-40a9-b238-7eb0155293f0" alt="SmartTrade Screenshot 3" width="100%">
 </p>
+
 # SmartTrade - Buy & Sell Made Easy
 
 Welcome to **SmartTrade**, the ultimate second-hand marketplace where users can buy and sell products securely and efficiently. Whether you're looking for great deals or want to give your items a second life, SmartTrade is the perfect place for you!
