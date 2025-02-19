@@ -8,7 +8,7 @@
         <nav id="navbar" class="navbar">
             <ul>
                 <li><a href="index.php?pages=controller_home" >Home</a></li>
-                <li><a href="index.php?pages=controller_shop&op=list_shop" >Shop</a></li>
+                <li><a href="index.php?pages=controller_shop&op=list" >Shop</a></li>
                 <!-- class="active" -->
                 <li class="dropdown"><a href="#"><span>About</span> <i class="bi bi-chevron-down"></i></a>
                     <ul>

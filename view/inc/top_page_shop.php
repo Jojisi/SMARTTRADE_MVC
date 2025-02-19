@@ -47,7 +47,8 @@
 		});
 	</script>
 	<link href="view/css/style.css" rel="stylesheet" type="text/css" />
-	<script src="module/shop/model/ctrl_shop.js"></script>
+	<script type="text/javascript" src="view/js/utils.js"></script>
+	<script src="module/shop/model/controller_shop.js"></script>
 	<!-- <script src="module/home/model/controller_home.js"></script> -->
 	<!-- <script src="module/households/model/validate_households.js"></script>
 	<script src="module/course/model/validate_course.js"></script>
