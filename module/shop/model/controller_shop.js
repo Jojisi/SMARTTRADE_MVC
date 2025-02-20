@@ -18,8 +18,10 @@ function ajaxForSearch(url) {
                             `<div class='card card-product' style='background-color: #f2f2f2;'>
                                 <img src='${data[row].img_product}' class='card-img-top'>
                                 <div class='card-body'>
-                                    <h1><b>${data[row].name}</b></h1>
-                                    <p><strong>Price:</strong> ${data[row].price}€</p>
+                                    <div class='title-price-container'>
+                                        <h1><b>${data[row].name}</b></h1>
+                                        <span class='price'>${data[row].price}€</span>
+                                    </div>
                                     <p><strong>Condition:</strong> ${data[row].name_condition_type}</p>
                                     <p><strong>Sale status:</strong> ${data[row].status_state}</p>
                                     <p><strong>Visit count:</strong> ${data[row].visit_count}</p>
@@ -39,3 +41,4 @@ $(document).ready(function () {
     loadProducts();
     console.log('SHOOOOOOP');
 });
+
