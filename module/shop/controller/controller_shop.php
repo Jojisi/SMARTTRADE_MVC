@@ -25,14 +25,23 @@ switch ($_GET['op']) {
     case 'details_product':
         try {
             $daoshop = new DAOShop();
-            $Date_product = $daoshop->select_one_product($_GET['id']);
-            $Imgs_product = $daoshop->select_imgs_product($_GET['id']);
-            if (!empty($Date_product) && !empty($Imgs_product)) {
-                echo json_encode([$Date_product, $Imgs_product]);
-            } else {
-                echo json_encode("error");
-            }
+            $Date_car = $daoshop->select_one_product($_GET['id']);
         } catch (Exception $e) {
+            echo json_encode("error");
+        }
+        try {
+            $daoshop_img = new DAOShop();
+            $Date_images = $daoshop_img->select_imgs_product($_GET['id']);
+        } catch (Exception $e) {
+            echo json_encode("error");
+        }
+
+        if (!empty($Date_car) || !empty($Date_images)) {
+            $rdo = array();
+            $rdo[0] = $Date_car;
+            $rdo[1] = $Date_images;
+            echo json_encode($rdo);
+        } else {
             echo json_encode("error");
         }
         break;

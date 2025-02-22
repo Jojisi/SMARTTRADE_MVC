@@ -81,21 +81,20 @@ function loadDetails(id_product) {
                     </div>`
                 );
 
-            new Glider(document.querySelector('.product_images'), {
-                slidesToShow: 1,
-                dots: '#dots',
-                draggable: true,
-                arrows: {
-                    prev: '.glider-prev',
-                    next: '.glider-next'
-                }
-            });
+            // new Glider(document.querySelector('.product_images'), {
+            //     slidesToShow: 1,
+            //     dots: '#dots',
+            //     draggable: true,
+            //     arrows: {
+            //         prev: '.glider-prev',
+            //         next: '.glider-next'
+            //     }
+            // });
 
         }).catch(function (error) {
             console.error('Error loading product details:', error);
         });
 }
-
 
 function clicks() {
     $(document).on("click", ".more_info_list", function () {
