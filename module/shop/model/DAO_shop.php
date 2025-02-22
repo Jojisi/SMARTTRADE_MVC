@@ -41,9 +41,7 @@ class DAOShop
 
     function select_imgs_product($id)
     {
-        $sql = "SELECT *
-                FROM image i
-                WHERE i.product_id = '$id';";
+        $sql = "SELECT * FROM image WHERE product_id = '$id'";
 
         $conexion = connect::con();
         $res = mysqli_query($conexion, $sql);

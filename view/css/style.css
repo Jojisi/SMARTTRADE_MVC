@@ -2914,3 +2914,124 @@ a:hover {
   color: #333;
 }
 
+/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////    DETAIIIIIIIIIIIIIIIIILS  */
+
+#details-product {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 60px 80px;
+  background: #f8f8f7;
+  margin-top: 40px;
+}
+
+.product_images {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+}
+
+.product_images img {
+  width: 80%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0px 12px 35px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s ease-in-out;
+}
+
+.product_images img:hover {
+  transform: scale(1.05);
+}
+
+.product_details {
+  width: 400px;
+  padding: 40px;
+  background: white;
+  border-radius: 18px;
+  box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.08);
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.product_details_inner h1 {
+  font-size: 30px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 15px;
+  line-height: 1.2;
+}
+
+.hr-shop {
+  border: none;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+}
+
+.table-shop {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-shop td {
+  padding: 12px 0;
+  font-size: 17px;
+  color: #555;
+  font-weight: 400;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.product_details_inner p {
+  font-size: 17px;
+  color: #666;
+  line-height: 1.6;
+}
+
+.buttons_details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.price_details {
+  font-size: 24px;
+  font-weight: 700;
+  color: #0a84ff;
+}
+
+.button {
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.like {
+  background: #ff3b30;
+  color: white;
+}
+
+.like:hover {
+  background: #d32f2f;
+}
+
+.button.price_details {
+  background: #0a84ff;
+  color: white;
+  cursor: pointer;
+}
+
+.button.price_details:hover {
+  background: #007aff;
+}
+

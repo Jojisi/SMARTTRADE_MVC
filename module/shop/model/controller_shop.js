@@ -41,7 +41,8 @@ function loadDetails(id_product) {
     ajaxPromise('module/shop/controller/controller_shop.php?op=details_product&id=' + id_product, 'GET', 'JSON')
         .then(function (data) {
             console.log(data);
-            $('#content_shop_products').empty();
+            $('#content_shop_products').hide(); // Ocultar la lista de productos
+            $('#details-product').show(); // Mostrar los detalles del producto
             $('#container-product-images').empty();
             $('#container-product-details').empty();
 
@@ -49,35 +50,35 @@ function loadDetails(id_product) {
                 for (let row of data[1]) {
                     $('<div></div>').attr({ 'id': row.id_img, class: 'product_images_inner' }).appendTo('#container-product-images')
                         .html(
-                            "<div class='content-img-details'>" +
-                            "<img src='view/img/product/" + row.img_product + "' alt='Product Image'>" +
-                            "</div>"
+                            `<div class='content-img-details'>
+                                <img src='${row.img_product}' alt='Product Image'>
+                            </div>`
                         );
                 }
             }
 
             $('<div></div>').attr({ 'id': data[0].id_product, class: 'product_details_inner' }).appendTo('#container-product-details')
                 .html(
-                    "<div class='list_product_details'>" +
-                    "<div class='product-info_details'>" +
-                    "<div class='product-content_details'>" +
-                    "<h1><b>" + data[0].name + "</b></h1>" +
-                    "<hr class='hr-shop'>" +
-                    "<table class='table-shop'>" +
-                    "<tr><td><b>Condition:</b> " + data[0].name_condition_type + "</td></tr>" +
-                    "<tr><td><b>Sale status:</b> " + data[0].status_state + "</td></tr>" +
-                    "<tr><td><b>Visit count:</b> " + data[0].visit_count + "</td></tr>" +
-                    "</table>" +
-                    "<hr class='hr-shop'>" +
-                    "<h3><b>Description:</b></h3>" +
-                    "<p>" + data[0].description + "</p>" +
-                    "<div class='buttons_details'>" +
-                    "<span class='button price_details'>" + data[0].price + "€</span>" +
-                    "<a class='button like' id='like_" + data[0].id_product + "'><i class='fa-solid fa-heart'></i></a>" +
-                    "</div>" +
-                    "</div>" +
-                    "</div>" +
-                    "</div>"
+                    `<div class='list_product_details'>
+                        <div class='product-info_details'>
+                            <div class='product-content_details'>
+                                <h1><b>${data[0].name}</b></h1>
+                                <hr class='hr-shop'>
+                                <table class='table-shop'>
+                                    <tr><td><b>Condition:</b> ${data[0].name_condition_type}</td></tr>
+                                    <tr><td><b>Sale status:</b> ${data[0].status_state}</td></tr>
+                                    <tr><td><b>Visit count:</b> ${data[0].visit_count}</td></tr>
+                                </table>
+                                <hr class='hr-shop'>
+                                <h3><b>Description:</b></h3>
+                                <p>${data[0].description}</p>
+                                <div class='buttons_details'>
+                                    <span class='button price_details'>${data[0].price}€</span>
+                                    <a class='button like' id='like_${data[0].id_product}'><i class='fa-solid fa-heart'></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>`
                 );
 
             new Glider(document.querySelector('.product_images'), {
@@ -90,10 +91,11 @@ function loadDetails(id_product) {
                 }
             });
 
-        }).catch(function () {
-            console.error('Error loading product details');
+        }).catch(function (error) {
+            console.error('Error loading product details:', error);
         });
 }
+
 
 function clicks() {
     $(document).on("click", ".more_info_list", function () {
@@ -108,4 +110,3 @@ $(document).ready(function () {
     clicks();
     console.log('SHOOOOOOP');
 });
-
