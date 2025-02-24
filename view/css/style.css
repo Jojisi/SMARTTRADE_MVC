@@ -3122,3 +3122,21 @@ button i {
   background-color: #333; /* Cambio de color al pasar el mouse */
 }
 
+.extra-item {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.extra-item img {
+    /* width: 100px;
+    height: auto; */
+  transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+}
+
+.extra-item:hover img {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+

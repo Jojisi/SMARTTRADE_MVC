@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 24-02-2025 a las 15:52:44
+-- Tiempo de generación: 08-02-2025 a las 12:54:56
 -- Versión del servidor: 10.4.27-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -38,21 +38,21 @@ CREATE TABLE `brand` (
 --
 
 INSERT INTO `brand` (`id_brand`, `name`, `img_brand`) VALUES
-(1, 'Apple', 'view/img/brand/apple.png'),
-(2, 'Samsung', 'view/img/brand/samsung.png'),
-(3, 'Sony', 'view/img/brand/sony.png'),
-(4, 'Nike', 'view/img/brand/nike.png'),
-(5, 'Canon', 'view/img/brand/canon.png'),
-(6, 'Microsoft', 'view/img/brand/microsoft.png'),
-(7, 'LG', 'view/img/brand/lg.png'),
-(8, 'Dell', 'view/img/brand/dell.png'),
-(9, 'Philips', 'view/img/brand/philips.png'),
-(10, 'Bosch', 'view/img/brand/bosch.png'),
-(11, 'Panasonic', 'view/img/brand/panasonic.png'),
-(12, 'Levis', 'view/img/brand/levis.png'),
-(13, 'Samsung Electronics', 'view/img/brand/samsung_electronics.png'),
-(14, 'Nike Sportswear', 'view/img/brand/nike_sportswear.png'),
-(15, 'Trek', 'view/img/brand/trek.png');
+(1, 'Apple', 'apple.jpg'),
+(2, 'Samsung', 'samsung.jpg'),
+(3, 'Sony', 'sony.jpg'),
+(4, 'Nike', 'nike.jpg'),
+(5, 'Canon', 'canon.jpg'),
+(6, 'Microsoft', 'microsoft.jpg'),
+(7, 'LG', 'lg.jpg'),
+(8, 'Dell', 'dell.jpg'),
+(9, 'Philips', 'philips.jpg'),
+(10, 'Bosch', 'bosch.jpg'),
+(11, 'Panasonic', 'panasonic.jpg'),
+(12, 'Levis', 'levis.jpg'),
+(13, 'Samsung Electronics', 'samsung_electronics.jpg'),
+(14, 'Nike Sportswear', 'nike_sportswear.jpg'),
+(15, 'Trek', 'trek.jpg');
 
 -- --------------------------------------------------------
 
@@ -71,21 +71,21 @@ CREATE TABLE `catalog` (
 --
 
 INSERT INTO `catalog` (`id_catalog`, `name`, `img_catalog`) VALUES
-(1, 'Electronics', 'view/img/catalog/electronics.png'),
-(2, 'Furniture', 'view/img/catalog/furniture.png'),
-(3, 'Fashion', 'view/img/catalog/fashion.png'),
-(4, 'Vehicles', 'view/img/catalog/vehicles.png'),
-(5, 'Toys', 'view/img/catalog/toys.png'),
-(6, 'Sports Equipment', 'view/img/catalog/sports_equipment.png'),
-(7, 'Books', 'view/img/catalog/books.png'),
-(8, 'Home Appliances', 'view/img/catalog/home_appliences.png'),
-(9, 'Beauty', 'view/img/catalog/beauty.png'),
-(10, 'Music Instruments', 'view/img/catalog/music_instruments.png'),
-(11, 'Gardening', 'view/img/catalog/gardening.png'),
-(12, 'Office Equipment', 'view/img/catalog/office_equipment.png'),
-(13, 'Pet Supplies', 'view/img/catalog/pet_supplies.png'),
-(14, 'Tools', 'view/img/catalog/tools.png'),
-(15, 'Baby Products', 'view/img/catalog/baby_products.png');
+(1, 'Electronics', 'electronics.jpg'),
+(2, 'Furniture', 'furniture.jpg'),
+(3, 'Fashion', 'fashion.jpg'),
+(4, 'Vehicles', 'vehicles.jpg'),
+(5, 'Toys', 'toys.jpg'),
+(6, 'Sports Equipment', 'sports_equipment.jpg'),
+(7, 'Books', 'books.jpg'),
+(8, 'Home Appliances', 'home_appliances.jpg'),
+(9, 'Beauty', 'beauty.jpg'),
+(10, 'Music Instruments', 'music_instruments.jpg'),
+(11, 'Gardening', 'gardening.jpg'),
+(12, 'Office Equipment', 'office_equipment.jpg'),
+(13, 'Pet Supplies', 'pet_supplies.jpg'),
+(14, 'Tools', 'tools.jpg'),
+(15, 'Baby Products', 'baby_products.jpg');
 
 -- --------------------------------------------------------
 
@@ -104,26 +104,26 @@ CREATE TABLE `city` (
 --
 
 INSERT INTO `city` (`id_city`, `name_city`, `img_city`) VALUES
-(1, 'Madrid', 'view/img/city/madrid.jpg'),
-(2, 'Barcelona', 'view/img/city/barcelona.jpg'),
-(3, 'Valencia', 'view/img/city/valencia.jpg'),
-(4, 'Sevilla', 'view/img/city/sevilla.jpg'),
-(5, 'Zaragoza', 'view/img/city/zaragoza.jpg'),
-(6, 'Málaga', 'view/img/city/malaga.jpg'),
-(7, 'Murcia', 'view/img/city/murcia.jpg'),
-(8, 'Palma', 'view/img/city/palma.jpg'),
-(9, 'Las Palmas', 'view/img/city/las_palmas.jpg'),
-(10, 'Bilbao', 'view/img/city/bilbao.jpg'),
-(11, 'Alicante', 'view/img/city/alicante.jpg'),
-(12, 'Córdoba', 'view/img/city/cordoba.jpg'),
-(13, 'Valladolid', 'view/img/city/valladolid.jpg'),
-(14, 'Vigo', 'view/img/city/vigo.jpg'),
-(15, 'Gijón', 'view/img/city/gijon.jpg'),
-(16, 'Oviedo', 'view/img/city/oviedo.jpg'),
-(17, 'Cádiz', 'view/img/city/cadiz.jpg'),
-(18, 'Burgos', 'view/img/city/burgos.jpg'),
-(19, 'Almería', 'view/img/city/almeria.jpg'),
-(20, 'Salamanca', 'view/img/city/salamanca.jpg');
+(1, 'Madrid', 'madrid.jpg'),
+(2, 'Barcelona', 'barcelona.jpg'),
+(3, 'Valencia', 'valencia.jpg'),
+(4, 'Sevilla', 'sevilla.jpg'),
+(5, 'Zaragoza', 'zaragoza.jpg'),
+(6, 'Málaga', 'malaga.jpg'),
+(7, 'Murcia', 'murcia.jpg'),
+(8, 'Palma', 'palma.jpg'),
+(9, 'Las Palmas', 'las_palmas.jpg'),
+(10, 'Bilbao', 'bilbao.jpg'),
+(11, 'Alicante', 'alicante.jpg'),
+(12, 'Córdoba', 'cordoba.jpg'),
+(13, 'Valladolid', 'valladolid.jpg'),
+(14, 'Vigo', 'vigo.jpg'),
+(15, 'Gijón', 'gijon.jpg'),
+(16, 'Oviedo', 'oviedo.jpg'),
+(17, 'Cádiz', 'cadiz.jpg'),
+(18, 'Burgos', 'burgos.jpg'),
+(19, 'Almería', 'almeria.jpg'),
+(20, 'Salamanca', 'salamanca.jpg');
 
 -- --------------------------------------------------------
 
@@ -142,57 +142,13 @@ CREATE TABLE `conditiontype` (
 --
 
 INSERT INTO `conditiontype` (`id_condition_type`, `name_condition_type`, `img_condition_type`) VALUES
-(1, 'New', 'view/img/condition/new.png'),
-(2, 'Like New', 'view/img/condition/like_new.png'),
-(3, 'Used', 'view/img/condition/used.png'),
-(4, 'Refurbished', 'view/img/condition/refurbished.png'),
-(5, 'Damaged', 'view/img/condition/damaged.png'),
-(6, 'Antique', 'view/img/condition/antique.png'),
-(7, 'Custom', 'view/img/condition/custom.png');
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `extras`
---
-
-CREATE TABLE `extras` (
-  `id_extras` int(11) NOT NULL,
-  `name_extras` varchar(255) DEFAULT NULL,
-  `extras_img` varchar(255) NOT NULL,
-  `product_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Volcado de datos para la tabla `extras`
---
-
-INSERT INTO `extras` (`id_extras`, `name_extras`, `extras_img`, `product_id`) VALUES
-(1, 'Funda protectora', 'https://example.com/images/case1.jpg', 2),
-(2, 'Charger', 'view/img/extras/charger.png', 1),
-(3, 'Auriculares Bluetooth', 'https://example.com/images/headphones1.jpg', 2),
-(4, 'Protector de pantalla', 'https://example.com/images/screen1.jpg', 2),
-(5, 'Original box', 'view/img/extras/original_box.png', 1),
-(6, 'Funda de cuero', 'https://example.com/images/case2.jpg', 2),
-(7, 'Cable USB-C', 'https://example.com/images/cable2.jpg', 2),
-(8, 'Manual de usuario', 'https://example.com/images/manual2.jpg', 2),
-(9, 'Base de carga', 'https://example.com/images/dock2.jpg', 2),
-(10, 'Warranty', 'view/img/extras/warranty.png', 1),
-(11, 'Teclado inalámbrico', 'https://example.com/images/keyboard3.jpg', 3),
-(12, 'Ratón ergonómico', 'https://example.com/images/mouse3.jpg', 3),
-(13, 'Bolsa de transporte', 'https://example.com/images/bag3.jpg', 3),
-(14, 'Batería extra', 'https://example.com/images/battery3.jpg', 3),
-(15, 'Adaptador HDMI', 'https://example.com/images/hdmi3.jpg', 3),
-(16, 'Carcasa resistente', 'https://example.com/images/case4.jpg', 4),
-(17, 'Altavoz portátil', 'https://example.com/images/speaker4.jpg', 4),
-(18, 'Trípode', 'https://example.com/images/tripod4.jpg', 4),
-(19, 'Control remoto', 'https://example.com/images/remote4.jpg', 4),
-(20, 'Cinta deportiva', 'https://example.com/images/strap4.jpg', 4),
-(21, 'Soporte de mesa', 'https://example.com/images/stand5.jpg', 5),
-(22, 'Lápiz táctil', 'https://example.com/images/stylus5.jpg', 5),
-(23, 'Mochila', 'https://example.com/images/backpack5.jpg', 5),
-(24, 'Lente gran angular', 'https://example.com/images/lens5.jpg', 5),
-(25, 'Tarjeta de memoria', 'https://example.com/images/memory5.jpg', 5);
+(1, 'New', ''),
+(2, 'Like New', ''),
+(3, 'Used', ''),
+(4, 'Refurbished', ''),
+(5, 'Damaged', ''),
+(6, 'Antique', ''),
+(7, 'Custom', '');
 
 -- --------------------------------------------------------
 
@@ -211,106 +167,46 @@ CREATE TABLE `image` (
 --
 
 INSERT INTO `image` (`id_img`, `img_product`, `product_id`) VALUES
-(1, 'view/img/product_details/iphone12_1.png', 1),
-(2, 'view/img/product_details/iphone12_2.png', 1),
-(3, 'view/img/product_details/iphone12_3.png', 1),
-(4, 'view/img/product_details/iphone12_4.png', 1),
-(5, 'view/img/product_details/iphone12_5.png', 1),
-(6, 'macbookpro16_1.jpg', 2),
-(7, 'macbookpro16_2.jpg', 2),
-(8, 'macbookpro16_3.jpg', 2),
-(9, 'macbookpro16_4.jpg', 2),
-(10, 'macbookpro16_5.jpg', 2),
-(11, 'galaxys21_1.jpg', 3),
-(12, 'galaxys21_2.jpg', 3),
-(13, 'galaxys21_3.jpg', 3),
-(14, 'galaxys21_4.jpg', 3),
-(15, 'galaxys21_5.jpg', 3),
-(16, 'vintage_bicycle_1.jpg', 4),
-(17, 'vintage_bicycle_2.jpg', 4),
-(18, 'vintage_bicycle_3.jpg', 4),
-(19, 'vintage_bicycle_4.jpg', 4),
-(20, 'vintage_bicycle_5.jpg', 4),
-(21, 'sony_4k_tv_1.jpg', 5),
-(22, 'sony_4k_tv_2.jpg', 5),
-(23, 'sony_4k_tv_3.jpg', 5),
-(24, 'sony_4k_tv_4.jpg', 5),
-(25, 'sony_4k_tv_5.jpg', 5),
-(26, 'xbox_series_x_1.jpg', 6),
-(27, 'xbox_series_x_2.jpg', 6),
-(28, 'xbox_series_x_3.jpg', 6),
-(29, 'xbox_series_x_4.jpg', 6),
-(30, 'xbox_series_x_5.jpg', 6),
-(31, 'dining_table_set_1.jpg', 7),
-(32, 'dining_table_set_2.jpg', 7),
-(33, 'dining_table_set_3.jpg', 7),
-(34, 'dining_table_set_4.jpg', 7),
-(35, 'dining_table_set_5.jpg', 7),
-(36, 'canon_eos5d_1.jpg', 8),
-(37, 'canon_eos5d_2.jpg', 8),
-(38, 'canon_eos5d_3.jpg', 8),
-(39, 'canon_eos5d_4.jpg', 8),
-(40, 'canon_eos5d_5.jpg', 8),
-(41, 'ps5_1.jpg', 9),
-(42, 'ps5_2.jpg', 9),
-(43, 'ps5_3.jpg', 9),
-(44, 'ps5_4.jpg', 9),
-(45, 'ps5_5.jpg', 9),
-(46, 'electric_scooter_1.jpg', 10),
-(47, 'electric_scooter_2.jpg', 10),
-(48, 'electric_scooter_3.jpg', 10),
-(49, 'electric_scooter_4.jpg', 10),
-(50, 'electric_scooter_5.jpg', 10),
-(51, 'gaming_chair_1.jpg', 11),
-(52, 'gaming_chair_2.jpg', 11),
-(53, 'gaming_chair_3.jpg', 11),
-(54, 'gaming_chair_4.jpg', 11),
-(55, 'gaming_chair_5.jpg', 11),
-(56, 'coffee_machine_1.jpg', 12),
-(57, 'coffee_machine_2.jpg', 12),
-(58, 'coffee_machine_3.jpg', 12),
-(59, 'coffee_machine_4.jpg', 12),
-(60, 'coffee_machine_5.jpg', 12),
-(61, 'mountain_bike_1.jpg', 13),
-(62, 'mountain_bike_2.jpg', 13),
-(63, 'mountain_bike_3.jpg', 13),
-(64, 'mountain_bike_4.jpg', 13),
-(65, 'mountain_bike_5.jpg', 13),
-(66, 'leather_sofa_1.jpg', 14),
-(67, 'leather_sofa_2.jpg', 14),
-(68, 'leather_sofa_3.jpg', 14),
-(69, 'leather_sofa_4.jpg', 14),
-(70, 'leather_sofa_5.jpg', 14),
-(71, 'smart_watch_1.jpg', 15),
-(72, 'smart_watch_2.jpg', 15),
-(73, 'smart_watch_3.jpg', 15),
-(74, 'smart_watch_4.jpg', 15),
-(75, 'smart_watch_5.jpg', 15),
-(76, 'fridge_freezer_1.jpg', 16),
-(77, 'fridge_freezer_2.jpg', 16),
-(78, 'fridge_freezer_3.jpg', 16),
-(79, 'fridge_freezer_4.jpg', 16),
-(80, 'fridge_freezer_5.jpg', 16),
-(81, 'electric_guitar_1.jpg', 17),
-(82, 'electric_guitar_2.jpg', 17),
-(83, 'electric_guitar_3.jpg', 17),
-(84, 'electric_guitar_4.jpg', 17),
-(85, 'electric_guitar_5.jpg', 17),
-(86, 'washing_machine_1.jpg', 18),
-(87, 'washing_machine_2.jpg', 18),
-(88, 'washing_machine_3.jpg', 18),
-(89, 'washing_machine_4.jpg', 18),
-(90, 'washing_machine_5.jpg', 18),
-(91, 'camping_tent_1.jpg', 19),
-(92, 'camping_tent_2.jpg', 19),
-(93, 'camping_tent_3.jpg', 19),
-(94, 'camping_tent_4.jpg', 19),
-(95, 'camping_tent_5.jpg', 19),
-(96, 'ps_vr_1.jpg', 20),
-(97, 'ps_vr_2.jpg', 20),
-(98, 'ps_vr_3.jpg', 20),
-(99, 'ps_vr_4.jpg', 20),
-(100, 'ps_vr_5.jpg', 20);
+(1, 'iphone12_1.jpg', 1),
+(2, 'iphone12_2.jpg', 1),
+(3, 'macbookpro16_1.jpg', 2),
+(4, 'macbookpro16_2.jpg', 2),
+(5, 'galaxys21_1.jpg', 3),
+(6, 'galaxys21_2.jpg', 3),
+(7, 'vintage_bicycle_1.jpg', 4),
+(8, 'vintage_bicycle_2.jpg', 4),
+(9, 'sony_4k_tv_1.jpg', 5),
+(10, 'sony_4k_tv_2.jpg', 5),
+(11, 'xbox_series_x_1.jpg', 6),
+(12, 'xbox_series_x_2.jpg', 6),
+(13, 'dining_table_set_1.jpg', 7),
+(14, 'dining_table_set_2.jpg', 7),
+(15, 'canon_eos5d_1.jpg', 8),
+(16, 'canon_eos5d_2.jpg', 8),
+(17, 'ps5_1.jpg', 9),
+(18, 'ps5_2.jpg', 9),
+(19, 'electric_scooter_1.jpg', 10),
+(20, 'electric_scooter_2.jpg', 10),
+(21, 'gaming_chair_1.jpg', 11),
+(22, 'gaming_chair_2.jpg', 11),
+(23, 'coffee_machine_1.jpg', 12),
+(24, 'coffee_machine_2.jpg', 12),
+(25, 'mountain_bike_1.jpg', 13),
+(26, 'mountain_bike_2.jpg', 13),
+(27, 'leather_sofa_1.jpg', 14),
+(28, 'leather_sofa_2.jpg', 14),
+(29, 'smart_watch_1.jpg', 15),
+(30, 'smart_watch_2.jpg', 15),
+(31, 'fridge_freezer_1.jpg', 16),
+(32, 'fridge_freezer_2.jpg', 16),
+(33, 'electric_guitar_1.jpg', 17),
+(34, 'electric_guitar_2.jpg', 17),
+(35, 'washing_machine_1.jpg', 18),
+(36, 'washing_machine_2.jpg', 18),
+(37, 'camping_tent_1.jpg', 19),
+(38, 'camping_tent_2.jpg', 19),
+(39, 'ps_vr_1.jpg', 20),
+(40, 'ps_vr_2.jpg', 20);
 
 -- --------------------------------------------------------
 
@@ -372,7 +268,7 @@ CREATE TABLE `product` (
 --
 
 INSERT INTO `product` (`id_product`, `name`, `description`, `price`, `stock`, `visit_count`, `lat`, `lng`, `img_product`, `user_id`, `condition_id`, `sale_status_id`) VALUES
-(1, 'iPhone 12', 'Brand new iPhone 12, 128GB, Space Gray', 799.99, 10, 200, 40.7128, -74.006, 'view/img/product_img/iphone12.png', 1, 1, 1),
+(1, 'iPhone 12', 'Brand new iPhone 12, 128GB, Space Gray', 799.99, 10, 200, 40.7128, -74.006, 'iphone12.jpg', 1, 1, 1),
 (2, 'MacBook Pro 16\"', 'Used MacBook Pro with 16-inch screen, 512GB SSD, 16GB RAM', 1500.00, 5, 150, 34.0522, -118.244, 'macbookpro16.jpg', 2, 2, 1),
 (3, 'Samsung Galaxy S21', 'Almost new Samsung Galaxy S21, 128GB, Phantom Gray', 699.00, 8, 180, 41.8781, -87.6298, 'galaxys21.jpg', 3, 2, 1),
 (4, 'Vintage Bicycle', 'Vintage bicycle, good condition, perfect for city rides', 150.00, 3, 50, 37.7749, -122.419, 'vintage_bicycle.jpg', 4, 3, 1),
@@ -555,13 +451,6 @@ ALTER TABLE `conditiontype`
   ADD PRIMARY KEY (`id_condition_type`);
 
 --
--- Indices de la tabla `extras`
---
-ALTER TABLE `extras`
-  ADD PRIMARY KEY (`id_extras`),
-  ADD KEY `product_id` (`product_id`);
-
---
 -- Indices de la tabla `image`
 --
 ALTER TABLE `image`
@@ -646,16 +535,10 @@ ALTER TABLE `conditiontype`
   MODIFY `id_condition_type` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
--- AUTO_INCREMENT de la tabla `extras`
---
-ALTER TABLE `extras`
-  MODIFY `id_extras` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
-
---
 -- AUTO_INCREMENT de la tabla `image`
 --
 ALTER TABLE `image`
-  MODIFY `id_img` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=101;
+  MODIFY `id_img` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
 
 --
 -- AUTO_INCREMENT de la tabla `model`
@@ -684,12 +567,6 @@ ALTER TABLE `salestatus`
 --
 -- Restricciones para tablas volcadas
 --
-
---
--- Filtros para la tabla `extras`
---
-ALTER TABLE `extras`
-  ADD CONSTRAINT `extras_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `product` (`id_product`) ON DELETE CASCADE;
 
 --
 -- Filtros para la tabla `image`

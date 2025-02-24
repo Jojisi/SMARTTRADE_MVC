@@ -26,18 +26,21 @@ class DAOShop
 
     function select_one_product($id)
     {
-        $sql = "SELECT p.id_product, p.name, p.description, p.price, p.img_product, p.visit_count, c.name_condition_type, s.status_state
+        $sql = "SELECT p.id_product, p.name, p.description, p.price, p.img_product, p.visit_count, 
+                       c.name_condition_type, s.status_state, 
+                       e.id_extras, e.name_extras, e.extras_img
                 FROM product p
                 INNER JOIN conditiontype c ON p.condition_id = c.id_condition_type
                 INNER JOIN salestatus s ON p.sale_status_id = s.id_sale_status
+                LEFT JOIN extras e ON p.extras_id = e.id_extras
                 WHERE p.id_product = '$id'";
-
+    
         $conexion = connect::con();
         $res = mysqli_query($conexion, $sql)->fetch_object();
         connect::close($conexion);
-
+    
         return $res;
-    }
+    }    
 
     function select_imgs_product($id)
     {
