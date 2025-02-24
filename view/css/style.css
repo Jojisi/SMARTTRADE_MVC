@@ -2824,8 +2824,9 @@ a:hover {
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  max-width: 800px;
+  max-width: 600px;
   width: 100%;
+  margin-left: 200px; /* Ajusta el valor según lo necesario */
 }
 
 .card-product img {
