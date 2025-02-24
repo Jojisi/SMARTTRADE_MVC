@@ -1,0 +1,2 @@
+oscuro: #12D212
+claro: #53FE7B
