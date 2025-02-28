@@ -2921,12 +2921,18 @@ a:hover {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 40px;
+  /* gap: 40px; */
   padding: 60px 80px;
-  margin-top: 40px;
+  /* margin-top: 40px; */
   background-color: #f9f9f7; /* Fondo suave y limpio */
   border-radius: 20px;
 }
+
+#shop-list {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
 
 .details-glider-contain {
   position: relative;
