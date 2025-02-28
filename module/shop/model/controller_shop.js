@@ -34,7 +34,7 @@ function loadProducts() {
     } else {
         ajaxForSearch("module/shop/controller/controller_shop.php?op=all_products");
     }
-  }
+}
 
 function ajaxForSearch(url, filter) {
     ajaxPromise(url, 'GET', 'JSON', { 'filter': filter })
@@ -263,9 +263,9 @@ function print_filters() {
         "</div>" +
         "</div>"
       );
-  }
+}
 
-  function filter_button() {
+function filter_button() {
     console.log("filter_button");
     //Filtro brand
     $(function () {
@@ -349,16 +349,16 @@ function print_filters() {
       // highlight(filter);
   
     });
-  }
+}
 
-  function load_details() {
+function load_details() {
     $(document).on('click', '.link', function () {
       var id = this.getAttribute('id');
       details(id);
     })
-  }
+}
   
-  function remove_filters() {
+function remove_filters() {
     $(document).on('click', '.filter_remove', function () {
       localStorage.removeItem('filter_brand');
       localStorage.removeItem('filter_catalog');
@@ -375,7 +375,7 @@ function print_filters() {
       localStorage.removeItem('filter');
       location.reload();
     })
-  }
+}
 
 $(document).ready(function () {
     loadProducts();
