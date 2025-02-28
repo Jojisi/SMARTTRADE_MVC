@@ -22,35 +22,45 @@ switch ($_GET['op']) {
         }
         break;
 
-        case 'details_product':
-            try {
-                $daoshop = new DAOShop();
-                $Date_car = $daoshop->select_one_product($_GET['id']);
-        
-                $daoshop_img = new DAOShop();
-                $Date_images = $daoshop_img->select_imgs_product($_GET['id']);
-        
-                if (!$Date_car) {
-                    die(json_encode(["error" => "Product not found"]));
-                }
-        
-                if (!$Date_images) {
-                    $Date_images = []; // Si no hay imágenes, devolvemos un array vacío
-                }
-        
-                $rdo = array();
-                $rdo[0] = $Date_car;
-                $rdo[1] = $Date_images;
-        
-                echo json_encode($rdo);
-            } catch (Exception $e) {
-                die(json_encode(["error" => $e->getMessage()]));
+    case 'details_product':
+        try {
+            $daoshop = new DAOShop();
+            $Date_car = $daoshop->select_one_product($_GET['id']);
+
+            $daoshop_img = new DAOShop();
+            $Date_images = $daoshop_img->select_imgs_product($_GET['id']);
+
+            if (!$Date_car) {
+                die(json_encode(["error" => "Product not found"]));
             }
-            break;
-        
+
+            if (!$Date_images) {
+                $Date_images = []; // Si no hay imágenes, devolvemos un array vacío
+            }
+
+            $rdo = array();
+            $rdo[0] = $Date_car;
+            $rdo[1] = $Date_images;
+
+            echo json_encode($rdo);
+        } catch (Exception $e) {
+            die(json_encode(["error" => $e->getMessage()]));
+        }
+        break;
+
+    case 'filter';
+        // echo json_encode('hola2');
+        // exit;
+        $homeQuery = new DAOShop();
+        $selSlide = $homeQuery->filters($_POST['filter']);
+        if (!empty($selSlide)) {
+            echo json_encode($selSlide);
+        } else {
+            echo "error";
+        }
+        break;
 
     default:
         include("module/exceptions/views/pages/error404.php");
         break;
 }
-?>

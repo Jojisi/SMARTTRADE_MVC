@@ -1,9 +1,43 @@
-function loadProducts() {
-    ajaxForSearch('module/shop/controller/controller_shop.php?op=all_products');
-}
+// function loadProducts() {
+//     ajaxForSearch('module/shop/controller/controller_shop.php?op=all_products');
+// }
 
-function ajaxForSearch(url) {
-    ajaxPromise(url, 'GET', 'JSON')
+function loadProducts() {
+    var brand_filter = JSON.parse(localStorage.getItem('brand_filter')) || false;
+    var catalog_filter = JSON.parse(localStorage.getItem('catalog_filter')) || false;
+    var condition_filter = JSON.parse(localStorage.getItem('condition_filter')) || false;
+    var city_filter = JSON.parse(localStorage.getItem('city_filter')) || false;
+    var sort_filter = JSON.parse(localStorage.getItem('sort_filter')) || false;
+    var search_filter = JSON.parse(localStorage.getItem('filters_search')) || false;
+    var trending_filters = JSON.parse(localStorage.getItem('trending_filter')) || false;
+    // console.log(search_filter);
+    var filter = JSON.parse(localStorage.getItem('filter'));
+  
+    if (brand_filter != false) {
+      // console.log(brand);
+        ajaxForSearch('module/shop/controller/controller_shop.php?op=filter' , [brand_filter]);
+    } else if (catalog_filter != false) {
+      // console.log(category);  
+        ajaxForSearch('module/shop/controller/controller_shop.php?op=filter' , [catalog_filter]);
+    } else if (condition_filter != false) {
+        ajaxForSearch('module/shop/controller/controller_shop.php?op=filter' , [condition_filter]);
+    } else if (city_filter != false) {
+        ajaxForSearch('module/shop/controller/controller_shop.php?op=filter' , [city_filter]);
+    } else if (sort_filter != false) {
+        ajaxForSearch('module/shop/ctrl/ctrl_shop.php?op=filter' , [sort_filter]);
+    } else if (search_filter != false) {
+        ajaxForSearch('module/shop/ctrl/ctrl_shop.php?op=filter' , [search_filter]);
+    } else if (trending_filters != false) {
+        loadDetails(trending_filters[1]); //Sin el LoadDetails no funciona
+    } else if (filter != undefined) {
+        ajaxForSearch("module/shop/controller/controller_shop.php?op=filter", filter);
+    } else {
+        ajaxForSearch("module/shop/controller/controller_shop.php?op=all_products");
+    }
+  }
+
+function ajaxForSearch(url, filter) {
+    ajaxPromise(url, 'GET', 'JSON', { 'filter': filter })
         .then(function (data) {
             console.log(data);
             $('#content_shop_products').empty();
@@ -46,6 +80,7 @@ function loadDetails(id_product) {
             $('#details-product').show(); // Mostrar detalles
             $('#details-container-product-images').empty(); // Limpiar el contenedor de imágenes
             $('#details-container-product-details').empty(); // Limpiar el contenedor de detalles
+            $('.filters').empty(); // Limpiar los filtros
 
             if (Array.isArray(data[1])) {
                 for (let row of data[1]) {
@@ -105,7 +140,6 @@ function loadDetails(id_product) {
         });
 }
 
-
 function clicks() {
     $(document).on("click", ".more_info_list", function () {
         var id_product = this.getAttribute('id');
@@ -129,8 +163,8 @@ function print_filters() {
         "</div>" +
         "<div class='col-md-6 mb-2'>" +
         "<div class='form-group'>" +
-        "<label for='motortype'>Brand</label>" +
-        "<select class='form-control form-control-lg form-control-a filter_motortype' id='motortype'>" +
+        "<label for='brand'>Brand</label>" +
+        "<select class='form-control form-control-lg form-control-a filter_brand' id='brand'>" +
         "<option value='Apple'>Apple</option>" +
         "<option value='Samsung'>Samsung</option>" +
         "<option value='Sony'>Sony</option>" +
@@ -151,8 +185,8 @@ function print_filters() {
         "</div>" +
         "<div class='col-md-6 mb-2'>" +
         "<div class='form-group'>" +
-        "<label for='category'>Catalog</label>" +
-        "<select class='form-control form-control-lg form-control-a filter_category' id='category'>" +
+        "<label for='catalog'>Catalog</label>" +
+        "<select class='form-control form-control-lg form-control-a filter_catalog' id='catalog'>" +
         "<option value='Electronics'>Electronics</option>" +
         "<option value='Furniture'>Furniture</option>" +
         "<option value='Fashion'>Fashion</option>" +
@@ -173,8 +207,8 @@ function print_filters() {
         "</div>" +
         "<div class='col-md-6 mb-2'>" +
         "<div class='form-group'>" +
-        "<label for='brand'>Condition</label>" +
-        "<select class='form-control form-control-lg form-control-a filter_brand' id='brand'>" +
+        "<label for='conditiontype'>Condition</label>" +
+        "<select class='form-control form-control-lg form-control-a filter_condition' id='conditiontype'>" +
         "<option value='New'>New</option>" +
         "<option value='Like New'>Like New</option>" +
         "<option value='Used'>Used</option>" +
@@ -187,8 +221,8 @@ function print_filters() {
         "</div>" +
         "<div class='col-md-6 mb-2'>" +
         "<div class='form-group'>" +
-        "<label for='sort'>City</label>" +
-        "<select class='form-control form-control-lg form-control-a filter_sort' id='sort'>" +
+        "<label for='city'>City</label>" +
+        "<select class='form-control form-control-lg form-control-a filter_city' id='city'>" +
         "<option value='Madrid'>Madrid</option>" +
         "<option value='Barcelona'>Barcelona</option>" +
         "<option value='Valencia'>Valencia</option>" +
@@ -231,9 +265,123 @@ function print_filters() {
       );
   }
 
+  function filter_button() {
+    console.log("filter_button");
+    //Filtro brand
+    $(function () {
+      $('.filter_brand').change(function () {
+        localStorage.setItem('filter_brand', this.value);
+      });
+      if (localStorage.getItem('filter_brand')) {
+        $('.filter_brand').val(localStorage.getItem('filter_brand'));
+      }
+    });
+  
+    //Filtro catalog
+    $(function () {
+      $('.filter_catalog').change(function () {
+        localStorage.setItem('filter_catalog', this.value);
+      });
+      if (localStorage.getItem('filter_catalog')) {
+        $('.filter_catalog').val(localStorage.getItem('filter_catalog'));
+      }
+    });
+  
+    //Filtro de conditiontype
+    $(function () {
+      $('.filter_condition').change(function () {
+        localStorage.setItem('filter_condition', this.value);
+      });
+      if (localStorage.getItem('filter_condition')) {
+        $('.filter_condition').val(localStorage.getItem('filter_condition'));
+      }
+    });
+  
+      //Filtro de city
+      $(function () {
+        $('.filter_city').change(function () {
+          localStorage.setItem('filter_city', this.value);
+        });
+        if (localStorage.getItem('filter_city')) {
+          $('.filter_city').val(localStorage.getItem('filter_city'));
+        }
+      });
+
+      //Filtro de sort
+      $(function () {
+        $('.filter_sort').change(function () {
+          localStorage.setItem('filter_sort', this.value);
+        });
+        if (localStorage.getItem('filter_sort')) {
+          $('.filter_sort').val(localStorage.getItem('filter_sort'));
+        }
+      });
+  
+    $(document).on('click', '.filter_button', function () {
+      var filter = [];
+  
+      if (localStorage.getItem('filter_brand')) {
+        filter.push(['id_brand', localStorage.getItem('filter_brand')])
+      }
+      if (localStorage.getItem('filter_catalog')) {
+        filter.push(['id_catalog', localStorage.getItem('filter_catalog')])
+      }
+      if (localStorage.getItem('filter_condition')) {
+        filter.push(['id_condition_type', localStorage.getItem('filter_condition')])
+      }
+      if (localStorage.getItem('filter_city')) {
+        filter.push(['id_city', localStorage.getItem('filter_city')])
+      }
+      if (localStorage.getItem('filter_sort')) {
+        filter.push(['sort', localStorage.getItem('filter_sort')])
+      }
+  
+  
+  
+      localStorage.setItem('filter', JSON.stringify(filter));
+  
+      if (filter) {
+        ajaxForSearch("module/shop/controller/controller_shop.php?op=filter", filter);
+      }
+      else {
+        ajaxForSearch("module/shop/controller/controller_shop.php?op=all_products");
+      }
+      // highlight(filter);
+  
+    });
+  }
+
+  function load_details() {
+    $(document).on('click', '.link', function () {
+      var id = this.getAttribute('id');
+      details(id);
+    })
+  }
+  
+  function remove_filters() {
+    $(document).on('click', '.filter_remove', function () {
+      localStorage.removeItem('filter_brand');
+      localStorage.removeItem('filter_catalog');
+      localStorage.removeItem('filter_condition');
+      localStorage.removeItem('filter_city');
+      localStorage.removeItem('filter_sort');
+      
+      localStorage.removeItem('sort_filter');
+      localStorage.removeItem('city_filter');
+      localStorage.removeItem('condition_filter');
+      localStorage.removeItem('catalog_filter');
+      localStorage.removeItem('brand_filter');
+  
+      localStorage.removeItem('filter');
+      location.reload();
+    })
+  }
+
 $(document).ready(function () {
     loadProducts();
     clicks();
     print_filters();
+    filter_button();
+    remove_filters();
     console.log('SHOOOOOOP');
 });

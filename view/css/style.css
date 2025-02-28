@@ -3172,7 +3172,7 @@ button i {
 #content_shop_products {
   display: grid; /* Para que respete la distancia */
   grid-template-columns: 1fr; /* Para mantener la lista */
-  gap: 25px; /* Aquí controlamos la distancia */
+  gap: 20px; /* Aquí controlamos la distancia */
   margin-left: -310px; /* Ahora sí los acerca 🔥🔥🔥 */
 }
 
