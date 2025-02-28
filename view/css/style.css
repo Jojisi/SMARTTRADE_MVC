@@ -2801,13 +2801,13 @@ a:hover {
 
 /* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////  SHOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOP */
 
-#content_shop_products {
+/* #content_shop_products {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 20px;
   margin-top: 80px;
-}
+} */
 
 .list_content_shop {
   width: 100%;
@@ -3140,4 +3140,140 @@ button i {
   transform: scale(1.05);
   opacity: 0.9;
 }
+
+/* Estilos para los filtros/////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* ==========================
+   Filters Section
+========================== */
+.shop-container {
+  display: flex; /* Alinea filtros y productos */
+  align-items: flex-start; /* Alineación arriba */
+}
+
+.filters {
+  width: 300px; /* Tamaño fijo */
+  position: sticky;
+  top: 20px;
+  height: calc(100vh - 40px);
+  overflow-y: auto;
+  padding: 20px;
+  background: #f5f5f5;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  z-index: 2;
+}
+
+.content {
+  flex: 1; /* Ocupa el espacio restante */
+  padding: 0; /* Quitamos el padding para evitar espacios raros */
+}
+
+#content_shop_products {
+  display: grid; /* Para que respete la distancia */
+  grid-template-columns: 1fr; /* Para mantener la lista */
+  gap: 25px; /* Aquí controlamos la distancia */
+  margin-left: -310px; /* Ahora sí los acerca 🔥🔥🔥 */
+}
+
+
+
+.content {
+  flex: 1; /* Ocupará el espacio restante */
+  padding-left: 20px; /* Espaciado entre los productos y los filtros */
+  padding-top: 20px; /* Separación arriba */
+}
+
+
+.filters h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.filters .form-group {
+  margin-bottom: 20px;
+}
+
+.filters label {
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 8px;
+  display: block;
+  color: #333;
+}
+
+.filters select {
+  width: 170%; /* Ocupa todo el ancho */
+  padding: 12px 15px; 
+  border: 2px solid rgba(80, 165, 255, 0.4);
+  border-radius: 10px; 
+  background: rgba(255, 255, 255, 0.8); /* Efecto glassmorphic */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  appearance: none; 
+  -webkit-appearance: none; 
+  -moz-appearance: none; 
+  background-image: url('https://cdn-icons-png.flaticon.com/512/60/60781.png'); /* Flecha */
+  background-size: 15px; 
+  background-position: right 15px center; 
+  background-repeat: no-repeat;
+  transition: all 0.3s ease; 
+  text-align: left; /* Opciones alineadas a la izquierda */
+}
+
+.filters select:hover {
+  background: rgba(255, 255, 255, 0.9);
+  border: 2px solid #50a5ff;
+}
+
+.filters select:focus {
+  outline: none;
+  box-shadow: 0 0 15px rgba(80, 165, 255, 0.5);
+}
+
+.filters .form-group {
+  display: flex;
+  flex-direction: column; /* Apila los selects verticalmente */
+  gap: 20px; /* Espacio entre selects */
+}
+
+
+.filter_button {
+  width: 100%;
+  padding: 10px;
+  background: #50a5ff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: background 0.3s ease;
+  cursor: pointer;
+}
+
+.filter_button:hover {
+  background: #448ddf;
+}
+
+.filter_remove {
+  width: 100%;
+  padding: 10px;
+  background: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-top: 10px;
+  transition: background 0.3s ease;
+  cursor: pointer;
+}
+
+.filter_remove:hover {
+  background: #c82333;
+}
+
+/* Ajuste para la lista de productos */
 

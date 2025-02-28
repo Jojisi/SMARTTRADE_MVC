@@ -1,31 +1,39 @@
 <!DOCTYPE html>
+
 <head>
+
 <body>
-        <!-- Contenido principal -->
 
-
-        <section id="shop-list">
-          <div class="mt-1 offset-md-1">
-              <div class="row" id="content_shop_products">
-                  <!-- Aquí se cargarán los productos dinámicamente -->
-              </div>
-          </div>
-      </section>
-  
-      <section id="details-product" style="display: none;">
-        <div class="details-glider-contain">
-            <div class="details-glider" id="details-container-product-images"></div>
-            <button aria-label="Previous" class="details-glider-prev">&#10094;</button>
-            <button aria-label="Next" class="details-glider-next">&#10095;</button>
-            <div role="tablist" class="details-dots"></div>
+    <br>
+  <br>
+  <div class="shop-container">
+    <aside class="filters" id="filters"></aside>
+    <main class="content">
+      <section id="shop-list">
+        <div class="mt-1 offset-md-1">
+          <div class="row" id="content_shop_products"></div>
         </div>
-        <div class="product_details" id="details-container-product-details"></div>
       </section>
-      
-    
-    
+    </main>
+  </div>
+  
+  
 
-        <br>
-        <br>
+  <section id="details-product" style="display: none;">
+    <div class="details-glider-contain">
+      <div class="details-glider" id="details-container-product-images"></div>
+      <button aria-label="Previous" class="details-glider-prev">&#10094;</button>
+      <button aria-label="Next" class="details-glider-next">&#10095;</button>
+      <div role="tablist" class="details-dots"></div>
+    </div>
+    <div class="product_details" id="details-container-product-details"></div>
+  </section>
+
+
+
+
+  <br>
+  <br>
 </body>
+
 </html>
